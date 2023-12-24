@@ -5,17 +5,16 @@ class Unit:
 
 class Soldier(Unit):
     def __init__(self, name, health, attack_power):
-    #    super().__init__(self, name, health)
-        self.name = name
-        self.health = health
         self.attack_power = attack_power
+        super().__init__(self, name, health)
+
     def attack1(self, target2):
         target2.health -= self.attack_power
     def yron1(self, health, target2):
         health -= Archer.attack2(self, target2)
 class Archer(Unit):
     def __init__(self, name, health, range_attack_power):
-        #super().__init__(self, name, health)
+        #super().__init__(name, health)
         self.name = name
         self.health = health
         self.range_attack_power = range_attack_power
